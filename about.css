@@ -1,0 +1,313 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 500ms ease-in-out;
+}
+
+.list-active{
+    color: #A2C543 !important;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.list-container ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-container ul li{
+    list-style-type: none;
+}
+
+.list-container ul li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.list-container ul li a:hover{
+    color: #A2C543;
+}
+
+.list-container ul li:not(:last-child){
+    padding-right: 45px;
+}
+
+.menu{
+    display: none;
+    width: 100%;
+}
+
+.home{
+    background: url('./assets/blog-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    position: relative;
+    top: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.home .content h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #A2C543;
+    text-transform: uppercase;
+}
+
+.home .content .span{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.home .content .span span:first-child{
+    color: #FFFFFF;
+    padding-right: 10px;
+}
+
+.home .content .span span:not(:first-child){
+    color: #A2C543;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    padding: 0 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+}
+
+.about-head h2{
+    color: #004586;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.about-head i{
+    padding-right: 20px;
+}
+
+.about-text{
+    width: 600px;
+}
+
+.about-text h3{
+    font-family: 'Lora', serif;
+    color: #777777;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 60px;
+    line-height: 30px;
+}
+
+.about-text p{
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    line-height: 20px;
+    padding-bottom: 40px;
+}
+
+.about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 75%;
+}
+
+footer{
+    background-color: #232323;
+    color: #FFFFFF;
+    height: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #B4B4B4;
+}
+
+
+.navTransparent{
+    background-color: rgba(225, 225, 225, 0.1);
+}
+
+.navColored{
+    background-color: #232323;
+}
+
+.menu{
+    position: absolute;
+    top: 120px;
+    background-color: #232323;
+    width: 100%;
+    z-index: 100;
+    left: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.menu li{
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+.menu li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+.menu li a:hover{
+    color: #A2C543;
+}
+
+.ham{
+    width: 30px;
+    height: 5px;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+}
+
+.ham-menu{
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    align-items: center;
+}
+
+.ham:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.top-clicked{
+    rotate: 45deg;
+    transform: translateY(10px) translateX(5px);
+}
+
+.mid-clicked{
+    display: none;
+}
+
+.bottom-clicked{
+    rotate: 135deg;
+    translate: -7px;
+}
+
+.menu-clicked{
+    display: flex;
+}
+
+.menu li:first-child{
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .list-container{
+        display: none;
+    }
+
+    nav{
+        background-color: #232323;
+    }
+
+    .nav{
+        background-color: #232323;
+    }
+    
+    .img-container img{
+        width: 85%;
+    }
+    
+    .ham-menu{
+        display: flex;
+    }
+    
+    .home .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about{
+        flex-direction: column;
+        padding: 0px 10px;
+        margin-top: 150px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-text{
+        position: static;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 75%;
+    }
+
+    .about .about-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about .about-img img{
+        width: 75%;
+    }
+
+    .about-text .about-head h2{
+        font-size: 22px;
+    }
+
+    .about-text h3{
+        text-align: justify;
+    }
+
+    .about-text p{
+        text-align: justify;
+    }
+}
